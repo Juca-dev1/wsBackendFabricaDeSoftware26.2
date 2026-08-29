@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameHub</title>
+
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🎮 GameHub</h1>
+
+            <nav>
+                <a href="/">Início</a>
+                <a href="/api/jogos/">Jogos</a>
+                <a href="/api/generos/">Gêneros</a>
+                <a href="/api/desenvolvedoras/">Desenvolvedoras</a>
+                <a href="/api/usuarios/">Usuários</a>
+                <a href="/api/schema/swagger-ui/">Swagger</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao GameHub</h2>
+
+                <p>
+                    Uma plataforma para gerenciamento de jogos,
+                    gêneros, desenvolvedoras e usuários.
+                </p>
+
+                <a class="botao" href="/api/schema/swagger-ui/">
+                    Acessar API
+                </a>
+            </div>
+        </section>
+
+        <section class="recursos">
+            <div class="container">
+
+                <h2>Recursos do sistema</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>🎮 Jogos</h3>
+                        <p>
+                            Cadastre, consulte, atualize e exclua
+                            jogos através da API REST.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🎭 Gêneros</h3>
+                        <p>
+                            Organize os jogos por gênero e mantenha
+                            as informações atualizadas.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🏢 Desenvolvedoras</h3>
+                        <p>
+                            Gerencie as empresas responsáveis
+                            pelo desenvolvimento dos jogos.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>👤 Usuários</h3>
+                        <p>
+                            Gerencie os usuários cadastrados
+                            no sistema.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>🌐 API Externa</h3>
+                        <p>
+                            Consulte informações de jogos através
+                            da integração com a FreeToGame API.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>📚 Swagger</h3>
+                        <p>
+                            Teste os endpoints da API utilizando
+                            uma documentação interativa.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+       <section class="contatos">
+    <div class="container">
+        <h2>Contatos</h2>
+
+        <div class="contatos-links">
+
+            <a class="whatsapp"
+               href="https://wa.me/83988035881"
+               target="_blank"
+               rel="noopener noreferrer">
+                📱 WhatsApp
+            </a>
+
+            <a href="https://www.instagram.com/juca_oliveiiraa/"
+               target="_blank"
+               rel="noopener noreferrer">
+                📸 Instagram
+            </a>
+
+            <a href="https://www.freetogame.com/api/games"
+               target="_blank"
+               rel="noopener noreferrer">
+                🌐 FreeToGame API
+            </a>
+
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>© 2026 GameHub API • Desenvolvido com Django REST Framework</p>
+    </div>
+</footer>

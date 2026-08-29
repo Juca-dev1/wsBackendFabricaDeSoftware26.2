@@ -62,3 +62,8 @@ class CustomObtainAuthToken(ObtainAuthToken):
         return Response(
             {'token': token.key}
         )
+def home(request):
+        return render(
+        request,
+        'app/index.html'
+    )

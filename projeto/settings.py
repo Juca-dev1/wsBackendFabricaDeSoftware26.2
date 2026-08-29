@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app',
     'rest_framework',
     'drf_spectacular',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,15 @@ MAILERS = {
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+
+     'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+
 }
 
 SPECTACULAR_SETTINGS = {
@@ -138,4 +148,5 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API para gerenciamento de jogos, gêneros, desenvolvedoras e usuários.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+
 }

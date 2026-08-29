@@ -2,8 +2,7 @@
 
 API REST desenvolvida em Django e Django REST Framework para gerenciamento de jogos.
 
-
-##  Sobre o projeto
+## Sobre o projeto
 
 O Sistema de Jogos é uma API REST desenvolvida com Python, Django e Django REST Framework.
 
@@ -11,6 +10,25 @@ O projeto permite realizar operações de cadastro, consulta, alteração e excl
 
 Além disso, o sistema realiza o consumo de uma API externa para obter informações sobre jogos.
 
+## Interface Web
+
+O projeto possui uma página inicial desenvolvida utilizando HTML, CSS e o sistema de templates do Django.
+
+A interface apresenta informações sobre os recursos disponíveis no sistema e fornece acesso rápido aos principais endpoints da API.
+
+Para acessar a página inicial:
+
+http://127.0.0.1:8000/
+
+A página possui atalhos para:
+
+- Jogos
+- Gêneros
+- Desenvolvedoras
+- Usuários
+- Swagger
+- API externa FreeToGame
+- Contatos
 
 ## Tecnologias utilizadas
 
@@ -21,6 +39,9 @@ Além disso, o sistema realiza o consumo de uma API externa para obter informaç
 - Requests
 - drf-spectacular
 - Sawgger
+- HTML5
+- CSS3
+- Django Templates
 
 ## Entidades
 
@@ -93,3 +114,25 @@ pip install -r requirements.txt
 python manage.py migrate
 
 python manage.py runserver
+```
+
+##  Autenticação por Token
+
+A API possui autenticação baseada em Token utilizando o Django REST Framework.
+
+Para gerar um token, utilize o endpoint:
+
+```text
+POST /api/token/
+
+
+##  Integração com API Externa
+
+O projeto realiza integração com a API FreeToGame para consultar jogos externos.
+
+Endpoint:
+
+```text
+GET /api/jogos-externos/
+
+

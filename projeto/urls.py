@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from app.views import buscar_jogos_externos
+from app.views import buscar_jogos_externos, CustomObtainAuthToken
+
 
 
 from drf_spectacular.views import (
@@ -85,6 +86,11 @@ urlpatterns = [
     path('api/schema/redoc/',
          SpectacularRedocView.as_view(url_name='schema'),
          name='redoc'
+),
+
+    path('api/token/',
+    CustomObtainAuthToken.as_view(),
+    name='api_token'
 ),
 
 ]

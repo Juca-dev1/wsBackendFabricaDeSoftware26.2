@@ -5,138 +5,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>GameHub</title>
-
+    <title>Ludex</title>
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <h1>🎮 GameHub</h1>
+<header>
+    <div class="container">
+        <h1>👾 Ludex</h1>
 
-            <nav>
-                <a href="/">Início</a>
-                <a href="/api/jogos/">Jogos</a>
-                <a href="/api/generos/">Gêneros</a>
-                <a href="/api/desenvolvedoras/">Desenvolvedoras</a>
-                <a href="/api/usuarios/">Usuários</a>
-                <a href="/api/schema/swagger-ui/">Swagger</a>
-            </nav>
-        </div>
-    </header>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/api/schema/swagger-ui/">Jogos</a>
+            <a href="/api/schema/swagger-ui/">Gêneros</a>
+            <a href="/api/schema/swagger-ui/">Desenvolvedoras</a>
+            <a href="/api/schema/swagger-ui/">Usuários</a>
+            <a href="/api/schema/swagger-ui/">Swagger</a>
+        </nav>
+    </div>
+</header>
 
-    <main>
+<main>
 
-        <section class="hero">
-            <div class="container">
-                <h2>Bem-vindo ao GameHub</h2>
+    <section class="hero">
+        <div class="container hero-content">
+           <span class="badge">👾 LUDEX • READY?</span>
 
-                <p>
-                    Uma plataforma para gerenciamento de jogos,
-                    gêneros, desenvolvedoras e usuários.
-                </p>
+            <h2>
+                Explore o universo dos
+                <span>Games</span>
+            </h2>
 
+            <p>
+                Gerencie jogos, gêneros, desenvolvedoras e usuários
+                com Django REST Framework.
+            </p>
+
+            <div class="hero-botoes">
                 <a class="botao" href="/api/schema/swagger-ui/">
-                    Acessar API
+                    Explorar API →
+                </a>
+
+                <a class="botao secundario" href="/api/schema/swagger-ui/">
+                    Testar endpoints
                 </a>
             </div>
-        </section>
-
-        <section class="recursos">
-            <div class="container">
-
-                <h2>Recursos do sistema</h2>
-
-                <div class="cards">
-
-                    <div class="card">
-                        <h3>🎮 Jogos</h3>
-                        <p>
-                            Cadastre, consulte, atualize e exclua
-                            jogos através da API REST.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>🎭 Gêneros</h3>
-                        <p>
-                            Organize os jogos por gênero e mantenha
-                            as informações atualizadas.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>🏢 Desenvolvedoras</h3>
-                        <p>
-                            Gerencie as empresas responsáveis
-                            pelo desenvolvimento dos jogos.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>👤 Usuários</h3>
-                        <p>
-                            Gerencie os usuários cadastrados
-                            no sistema.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>🌐 API Externa</h3>
-                        <p>
-                            Consulte informações de jogos através
-                            da integração com a FreeToGame API.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>📚 Swagger</h3>
-                        <p>
-                            Teste os endpoints da API utilizando
-                            uma documentação interativa.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        
-       <section class="contatos">
-    <div class="container">
-        <h2>Contatos</h2>
-
-        <div class="contatos-links">
-
-            <a class="whatsapp"
-               href="https://wa.me/83988035881"
-               target="_blank"
-               rel="noopener noreferrer">
-                📱 WhatsApp
-            </a>
-
-            <a href="https://www.instagram.com/juca_oliveiiraa/"
-               target="_blank"
-               rel="noopener noreferrer">
-                📸 Instagram
-            </a>
-
-            <a href="https://www.freetogame.com/api/games"
-               target="_blank"
-               rel="noopener noreferrer">
-                🌐 FreeToGame API
-            </a>
-
         </div>
-    </div>
-</section>
 
-    </main>
+        <img
+            class="personagem personagem-direita"
+            src="{% static 'app/img/iori.jpg' %}"
+            alt="personagem iori"
+        > 
 
-    <footer>
+
+        <img
+            class="personagem personagem-esquerda"
+            src="{% static 'app/img/kyo.jpg' %}"
+            alt="personagem kyo"
+        > 
+
+
+    </section>
+
+    <section class="recursos">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>RECURSOS</span>
+                <h2>Explore o Ludex</h2>
+                <p>Acesse os principais recursos do sistema.</p>
+            </div>
+
+            <div class="cards">
+
+                <a href="/api/schema/swagger-ui/" class="card">
+                    <div class="icone azul">🎮</div>
+                    <h3>Jogos</h3>
+                    <p>Gerencie os jogos cadastrados.</p>
+                    <strong>Testar →</strong>
+                </a>
+
+                <a href="/api/schema/swagger-ui/" class="card">
+                    <div class="icone roxo">🎭</div>
+                    <h3>Gêneros</h3>
+                    <p>Gerencie os gêneros dos jogos.</p>
+                    <strong>Testar →</strong>
+                </a>
+
+                <a href="/api/schema/swagger-ui/" class="card">
+                    <div class="icone rosa">🏢</div>
+                    <h3>Desenvolvedoras</h3>
+                    <p>Gerencie as desenvolvedoras.</p>
+                    <strong>Testar →</strong>
+                </a>
+
+                <a href="/api/schema/swagger-ui/" class="card">
+                    <div class="icone verde">👤</div>
+                    <h3>Usuários</h3>
+                    <p>Gerencie os usuários do sistema.</p>
+                    <strong>Testar →</strong>
+                </a>
+
+                <a href="/api/jogos-externos/" class="card">
+                    <div class="icone laranja">🌐</div>
+                    <h3>API Externa</h3>
+                    <p>Consulte jogos na FreeToGame API.</p>
+                    <strong>Consultar →</strong>
+                </a>
+
+                <a href="/api/schema/swagger-ui/" class="card">
+                    <div class="icone ciano">📚</div>
+                    <h3>Swagger</h3>
+                    <p>Teste os endpoints da API.</p>
+                    <strong>Abrir →</strong>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contatos">
+        <div class="container">
+
+            <div class="titulo-secao">
+                <span>CONTATOS</span>
+                <h2>Entre em contato</h2>
+            </div>
+
+            <div class="contatos-links">
+
+                <a class="whatsapp"
+                   href="https://wa.me/83988035881"
+                   target="_blank">
+                    📱 WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/juca_oliveiiraa/"
+                   target="_blank">
+                    📸 Instagram
+                </a>
+
+                <a href="https://www.freetogame.com/api/games"
+                   target="_blank">
+                    🌐 FreeToGame API
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
     <div class="container">
-        <p>© 2026 GameHub API • Desenvolvido com Django REST Framework</p>
+        <h3>👾 Ludex</h3>
+        <p>© 2026 Ludex API • Django REST Framework</p>
     </div>
 </footer>
+
+</body>
+</html>

@@ -115,24 +115,34 @@ O Ludex possui:
 - Swagger UI
 - ReDoc
 - Interface web responsiva
+
 ---
 
 ## 🌐 Endpoints
 
-| Recurso | Endpoint |
-|---|---|
-| Jogos | `/api/jogos/` |
-| Gêneros | `/api/generos/` |
-| Desenvolvedoras | `/api/desenvolvedoras/` |
-| Usuários | `/api/usuarios/` |
-| Jogos externos | `/api/jogos-externos/` |
-| Token | `/api/token/` |
-| Schema OpenAPI | `/api/schema/` |
-| Swagger | `/api/schema/swagger-ui/` |
-| ReDoc | `/api/schema/redoc/` |
+| Recurso         | Endpoint                  |
+| --------------- | ------------------------- |
+| Jogos           | `/api/jogos/`             |
+| Gêneros         | `/api/generos/`           |
+| Desenvolvedoras | `/api/desenvolvedoras/`   |
+| Usuários        | `/api/usuarios/`          |
+| Jogos externos  | `/api/jogos-externos/`    |
+| Token           | `/api/token/`             |
+| Schema OpenAPI  | `/api/schema/`            |
+| Swagger         | `/api/schema/swagger-ui/` |
+| ReDoc           | `/api/schema/redoc/`      |
+
 ---
 
 ## 🔐 Autenticação
+
+Para gerar um token, é necessário possuir um usuário válido no sistema de autenticação do Django.
+
+Um administrador pode criar esse usuário utilizando:
+
+````bash
+python manage.py createsuperuser
+
 
 A API utiliza autenticação baseada em **Token** do Django REST Framework.
 
@@ -140,7 +150,7 @@ Para obter um token, envie uma requisição:
 
 ```text
 POST /api/token/
-```
+````
 
 Informando usuário e senha.
 
@@ -148,8 +158,8 @@ Exemplo:
 
 ```json
 {
-    "username": "seu_usuario",
-    "password": "sua_senha"
+  "username": "seu_usuario",
+  "password": "sua_senha"
 }
 ```
 
@@ -157,7 +167,7 @@ A API retornará um token:
 
 ```json
 {
-    "token": "seu_token"
+  "token": "seu_token"
 }
 ```
 
@@ -166,6 +176,7 @@ Nas requisições autenticadas, utilize:
 ```text
 Authorization: Token seu_token
 ```
+
 ---
 
 ## 📚 Documentação da API
@@ -193,6 +204,7 @@ http://127.0.0.1:8000/api/schema/redoc/
 ```text
 http://127.0.0.1:8000/api/schema/
 ```
+
 ---
 
 ## 🌍 API Externa
@@ -244,6 +256,7 @@ Entre na pasta:
 ```bash
 cd wsBackendFabricaDeSoftware26.2
 ```
+
 ---
 
 ## 2. Crie o ambiente virtual
@@ -251,6 +264,7 @@ cd wsBackendFabricaDeSoftware26.2
 ```bash
 python -m venv venv
 ```
+
 ---
 
 ## 3. Ative o ambiente virtual
@@ -266,6 +280,7 @@ venv\Scripts\activate
 ```bash
 source venv/bin/activate
 ```
+
 ---
 
 ## 4. Instale as dependências
@@ -273,6 +288,7 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
 ---
 
 ## 5. Execute as migrações
@@ -281,8 +297,7 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-Isso criará as tabelas necessárias no banco de dados.
----
+## Isso criará as tabelas necessárias no banco de dados.
 
 ## 6. Crie um usuário administrador
 
@@ -291,9 +306,11 @@ Para acessar o Django Admin e gerar credenciais para autenticação, crie um sup
 ```bash
 python manage.py createsuperuser
 ```
+
 Informe os dados solicitados pelo Django.
 
 ---
+
 ## 7. Inicie o servidor
 
 ```bash
@@ -305,6 +322,7 @@ Se tudo estiver correto, o servidor será iniciado em:
 ```text
 http://127.0.0.1:8000/
 ```
+
 ---
 
 ## 🧪 Como testar a API
@@ -325,8 +343,7 @@ Depois:
 4. Informe o token.
 5. Teste os endpoints disponíveis.
 
-Você poderá testar operações `GET`, `POST`, `PUT`, `PATCH` e `DELETE`.
----
+## Você poderá testar operações `GET`, `POST`, `PUT`, `PATCH` e `DELETE`.
 
 ## 📂 Estrutura principal
 
@@ -353,19 +370,20 @@ manage.py
 requirements.txt
 README.md
 ```
+
 ---
 
 ## 🔄 Operações CRUD
 
 Os principais recursos utilizam as operações padrão de uma API REST:
 
-| Método | Operação |
-|---|---|
-| `GET` | Consultar dados |
-| `POST` | Cadastrar dados |
-| `PUT` | Atualizar completamente |
-| `PATCH` | Atualizar parcialmente |
-| `DELETE` | Excluir dados |
+| Método   | Operação                |
+| -------- | ----------------------- |
+| `GET`    | Consultar dados         |
+| `POST`   | Cadastrar dados         |
+| `PUT`    | Atualizar completamente |
+| `PATCH`  | Atualizar parcialmente  |
+| `DELETE` | Excluir dados           |
 
 ---
 
@@ -381,7 +399,9 @@ Sempre que houver alterações nos modelos, podem ser utilizados:
 python manage.py makemigrations
 python manage.py migrate
 ```
+
 ---
+
 ## 👾 Ludex
 
 Projeto desenvolvido com **Django REST Framework** para gerenciamento e consulta de jogos.

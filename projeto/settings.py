@@ -144,7 +144,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'GameHub API',
+    'TITLE': '👾 Ludex',
     'DESCRIPTION': 'API para gerenciamento de jogos, gêneros, desenvolvedoras e usuários.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
